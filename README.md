@@ -12,7 +12,7 @@ The technologies used for this application are HTML, CSS, and Javascript. This a
 
 ## The APP Images
 
-https://github.com/Kingcoopa/Ask-Tech-Quiz/issues/2#issue-817782445
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/69878838/109370705-7d128200-786f-11eb-8424-e3f1ad807cf7.gif)
 
 ## The Rules to Play
 

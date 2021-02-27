@@ -97,3 +97,209 @@ ul {
     border: 1px solid  rgb(255, 19, 98);
     transition: all 0.4s ease;
 }
+
+/* Quiz Card */
+.quiz_card{
+    width: 555px;
+    background: #fff;
+    border-radius: 5px;
+    border: 3px solid rgb(182, 179, 179);
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.quiz_card header{
+    position: relative;
+    z-index: 2;
+    height: 75px;
+    padding: 0 32px;
+    background: rgb(165, 164, 164);
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 6px 2px rgba(0,0,0,0.1);
+}
+
+.quiz_card header .title{
+    font-size: 22px;
+    font-weight: 550;
+}
+
+/* Quiz Card Timer */
+.quiz_card header .quiz_timer{
+    color: #0c0d0e;
+    background: #84858681;
+    border: 1px solid #080808;
+    height: 48px;
+    padding: 0 9px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 155px;
+}
+
+.quiz_card header .quiz_timer .time_text{
+    font-weight: 450;
+    font-size: 17px;
+    user-select: none;
+}
+
+.quiz_card header .quiz_timer .time_seconds{
+    font-size: 18px;
+    font-weight: 550;
+    height: 30px;
+    width: 45px;
+    color: rgb(240, 14, 14);
+    border-radius: 7px;
+    line-height: 30px;
+    text-align: center;
+    background: #f4f7fa;
+    border: 1px solid #343a40;
+    user-select: none;
+}
+
+.quiz_card header .time_line{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background: rgb(165, 164, 164);
+}
+
+/* Answer Section */
+section{
+    padding: 26px 32px 22px 32px;
+    background: rgb(7, 7, 7);
+    color: white;
+}
+
+section .ques_text{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+section .answ_list{
+    padding: 22px 0px;
+    display: block;   
+}
+
+section .answ_list .choice{
+    background: rgba(245, 187, 221, 0.219);
+    border: 1px solid #f887cd;
+    border-radius: 6px;
+    padding: 9px 16px;
+    font-size: 18px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .answ_list .choice:last-child{
+    margin-bottom: 0px;
+}
+
+section .answ_list .choice:hover{
+    color: #f8f7f8;
+    background: #ad1952;
+    border: 1px solid #d60f83;
+}
+
+section .answ_list .choice.correct{
+    color: #e1e7e2;
+    background: #191f1a;
+    border: 3px solid #0cec40;
+}
+
+section .answ_list .choice.incorrect{
+    color: #f5eeef;
+    background: #191f1a;
+    border: 3px solid #f00c23;
+}
+
+section .answ_list .choice.disabled{
+    pointer-events: none;
+}
+
+section .answr_list .choice .icon{
+    height: 26px;
+    width: 26px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 13px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    line-height: 24px;
+}
+.answ_list .choice .icon-tick{
+    color: #0cec40;
+}
+
+.answ_list .choice .icon-cross{
+    color: #f00c23;
+}
+
+/* Quiz Card Footer */
+.quiz_card footer{
+    background:rgb(165, 164, 164) ;
+    height: 60px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid lightgrey;
+}
+
+.quiz_card footer .total_que span{
+    display: flex;
+    user-select: none;
+}
+
+.quiz_card footer .total_que span p{
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+footer .total_que span p:first-child{
+    padding-left: 0px;
+}
+
+footer button{
+    height: 45px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: rgb(255, 19, 98);
+    border-radius: 5px;
+    background:  rgb(255, 253, 254);
+    border: 3px solid rgb(255, 19, 98);
+    line-height: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
+    transition: all 0.4s ease;
+}
+
+footer button:hover{
+    background: rgb(255, 19, 98);
+    border: 3px solid rgb(5, 5, 5);
+    color: white;
+    transform:scale(1.1)
+}
+
+footer button.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}

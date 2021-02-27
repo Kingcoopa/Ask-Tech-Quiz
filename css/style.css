@@ -16,6 +16,32 @@ ul {
     margin-left: 20px;
 }
 
+::selection{
+    color: rgb(255, 255, 255);
+    background:  rgb(255, 19, 98);
+}
+
+.begin_btn,
+.information_card,
+.quiz_card,
+.results_card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.information_card.activeInfo,
+.quiz_card.activeQuiz,
+.results_card.activeResult{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
 /* Begin Button */
 .begin_btn button{
     font-size: 30px;

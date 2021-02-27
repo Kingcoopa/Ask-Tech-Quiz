@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+    <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Ask-Tech PopQuiz Scores</title>
+            <link rel="stylesheet" href="savescore.css">
+        </head>
+
+            <body>
+                <!-- Save Score Form -->
+                <div class="container">
+                    <div id="end" class="flex-center flex-column">
+                        <h1 id="finalscore">Final Scores</h1>
+                        <p>Note: Once you type your name; click outside the input area; and save. Refresh your browser, to see your result!!!</p>
+                        <form>
+                            <input type="text" name="username" id="username"
+                            placeholder="username"
+                            />
+                            <button type="submit" class="btn" id="saveScoreBtn" 
+                            onclick="saveHighScore(event)" disabled>Save</button>
+                         </form>
+
+                        <section class="buttons">
+
+                            <!-- Sends the player back to the Root HTML file -->
+                            <a href="index.html"><button class="quit">Play Again</button></a>
+                        </section>
+
+                    </div>
+                </div>
+
+                <div class="container-scores">
+                    <h1>Score History</h1>
+                    <ul id="highScoreList"></ul>              
+                </div>
+    
+                <script src="savescore.js"></script>
+                <script src="script.js"></script>
+
+        </body>
+
+    </html>
+
+</html>
+

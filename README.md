@@ -12,6 +12,8 @@ The technologies used for this application are HTML, CSS, and Javascript. This a
 
 ## The APP Images
 
+https://github.com/Kingcoopa/Ask-Tech-Quiz/issues/2#issue-817782445
+
 ## The Rules to Play
 
 Once you have entered the application, you are given 15 seconds to answer each question. If you fail to answer, the question will be answered wrong. If you answer incorrectly the question will be answered wrong. Once you have gone through all the questions, in the quiz, you will be sent to a replay, quit, or save page. On the save page you will enter your name, and save your score.

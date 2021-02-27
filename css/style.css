@@ -15,3 +15,85 @@ ul {
     list-style: none;
     margin-left: 20px;
 }
+
+/* Begin Button */
+.begin_btn button{
+    font-size: 30px;
+    font-weight: 550;
+    color: #e1e6eb;
+    padding: 16px 31px;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    background: rgb(255, 19, 98);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.begin_btn button:hover {
+    font-size: 40px;
+    color: rgb(255, 19, 98);
+    background:  rgb(12, 12, 12);
+    border: 1px solid  rgb(255, 19, 98);
+    transform: scale(1.1)
+}
+
+/* QUiz Information Card */
+.information_card{
+    width: 545px;
+    background: rgb(182, 179, 179);
+    border-radius: 7px;
+    border: 3px solid rgb(182, 179, 179);
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+
+.information_card .information-title{
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    border-radius: 5px 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.information_card .information_list{
+    padding: 15px 15px;
+}
+
+.information_card .information_list .information{
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.information_card .information_list .information span{
+    font-weight: 600;
+    color: #e70f0f;
+}
+.information_card .buttons{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+    border-top: 1px solid lightgrey;
+}
+
+.information_card .buttons button{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid  rgb(255, 19, 98);
+    transition: all 0.4s ease;
+}

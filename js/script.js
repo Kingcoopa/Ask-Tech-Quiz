@@ -159,7 +159,94 @@
 
     for     (i=0; i < allchoices; i++){
 
-    choices_list.children[i].classList.add("disabled"); // once answer is picked, the answer choices are disabled
+        choices_list.children[i].classList.add("disabled"); // once answer is picked, the answer choices are disabled
 
     }
+
+        next_btn.classList.add("show"); // shows next button, once answer is picked
+
+}
+
+    function showResult(){
+
+        information_card.classList.remove("activeInfo"); // hide information card
+        quiz_card.classList.remove("activeQuiz"); // hide quiz card
+        results_card.classList.add("activeResult"); // show results card
+        const scoreText = results_card.querySelector(".score_text");
+        localStorage.setItem('score', playersScore);
+
+    if      (playersScore > 3){ // Player scores 3 or better
+
+            // players score and total question number to win/lose
+            let scoreTag = '<span> You Win! You got <p>'+ playersScore +'</p> out of <p>'+ questions.length +'</p></span>';
+            scoreText.innerHTML = scoreTag;  //add score text
+    }
+
+    else if     (playersScore > 1){ // player scores 1, but less than 3
+
+                let scoreTag = '<span>You are so close! You got <p>'+ playersScore +'</p> out of <p>'+ questions.length +'</p></span>';
+                scoreText.innerHTML = scoreTag;
+    }
+
+    else        { // player scores 0
+                let scoreTag = '<span>You Loss! You got only <p>'+ playersScore +'</p> out of <p>'+ questions.length +'</p></span>';
+                scoreText.innerHTML = scoreTag;
+    }
+}
+
+    function startTime(time){
+
+        counter = setInterval(timer, 1000);
+        function timer(){   
+        timeCount.textContent = time; // time count to time value
+        time--;
+
+    if      (time < 9){ // time below 9
+            let Zero = timeCount.textContent; 
+            timeCount.textContent = "0" + Zero; // adds a 0 for single digit
+    }
+
+    if      (time < 0){ // time below 0
+            clearInterval(counter); // ends counter
+            timeText.textContent = "Secs:";
+            const allchoices = choices_list.children.length; // grabs all answers in the array
+            let correctAnsw = questions[que_counter].answer; // shows the right answer
+
+    for     (i=0; i < allchoices; i++){
+
+    if      (choices_list.children[i].textContent == correctAnsw){ // choice matches the array answer
+                    choices_list.children[i].setAttribute("class", "choice correct"); //adds  green color 
+                    choices_list.children[i].insertAdjacentHTML("beforeend", tickTag); //adds check
+                    console.log("Time Off: Auto selected correct answer.");
+    }
+}
+
+    for     (i=0; i < allchoices; i++){
+                choices_list.children[i].classList.add("disabled"); // when an answer is choosen the answer console is disabled
+    }
+
+            next_btn.classList.add("show"); //shows the next button
+
+        }
+    }
+}
+
+    function startTimeLine(time){
+
+            counterLine = setInterval(timer, 29);
+            function timer(){
+
+                time += 1; // increase time by 1
+                time_line.style.width = time + "px"; // increase time line
+                if(time > 549){ // time greater than 549
+                    clearInterval(counterLine); // hide counter line
+        }
+    }
+}
+
+    function queCounting(index){
+
+        // passed question number and total questions
+        let totQuesCounTag = '<span><p>'+ index +'</p> of <p>'+ questions.length +'</p> Questions</span>';
+        bottom_counter.innerHTML = totQuesCounTag;  // add number in bottom counter
 }

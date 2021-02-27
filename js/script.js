@@ -97,3 +97,69 @@
             showResult(); // show result
     }
 }
+
+// getting questions from the array
+    function showQuestions(index){
+
+        const q_text = document.querySelector(".ques_text");
+
+// <p> tag for questions and choices, passing value using array
+        let ques_tag = '<span>'+ questions[index].number + ". " + questions[index].question +'</span>';
+        let choice_tag = '<p class="choice"><span>'+ questions[index].choices[0] +'</span></p>'
+        + '<p class="choice"><span>'+ questions[index].choices[1] +'</span></p>'
+        + '<p class="choice"><span>'+ questions[index].choices[2] +'</span></p>'
+        + '<p class="choice"><span>'+ questions[index].choices[3] +'</span></p>';
+        q_text.innerHTML = ques_tag; // span tag inside ques_tag
+        choices_list.innerHTML = choice_tag; // new p tag inside choice_tag
+    
+    const choice = choices_list.querySelectorAll(".choice");
+
+//  all available choices clickable
+    for (i=0; i < choice.length; i++){
+
+        choice[i].setAttribute("onclick", "optionSelected(this)");
+
+}
+}
+
+// tags for right and wrong icons
+    let tickTag = '<div class="icon-tick"><i class="fas fa-check"></i></div>';
+    let crossTag = '<div class="icon-cross"><i class="fas fa-times"></i></div>';
+
+// Clicking on an answer
+    function optionSelected(answer){
+
+        clearInterval(counter); // clear counter
+        clearInterval(counterLine); // clear counterLine
+        let playersAnsw = answer.textContent; // selects answer
+        let correctAnsw = questions[que_counter].answer; // array the right answer
+        const allchoices = choices_list.children.length; // all choices
+
+    if      (playersAnsw == correctAnsw){ // player selects right answer
+            playersScore += 1; // increase score by 1
+            answer.classList.add("correct"); // adds green to correct answer
+            answer.insertAdjacentHTML("beforeend", tickTag); // adds check for the right answer
+            console.log("Correct Answer");
+            console.log("Your correct answers = " + playersScore);
+    }else{
+            answer.classList.add("incorrect"); // adds red to incorrect answer
+            answer.insertAdjacentHTML("beforeend", crossTag); // adds X for wrong answer
+            console.log("Wrong Answer");
+
+    for (i=0; i < allchoices; i++){
+
+    if      (choices_list.children[i].textContent == correctAnsw){ // answer matches the array answer
+            choices_list.children[i].setAttribute("class", "choice correct"); // adds green color
+            choices_list.children[i].insertAdjacentHTML("beforeend", tickTag); // adds check
+            console.log("Auto selected correct answer.");
+
+        }
+    }
+}
+
+    for     (i=0; i < allchoices; i++){
+
+    choices_list.children[i].classList.add("disabled"); // once answer is picked, the answer choices are disabled
+
+    }
+}

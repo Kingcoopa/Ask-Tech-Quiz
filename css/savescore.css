@@ -1,0 +1,206 @@
+/* importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: black;
+}
+ 
+ form {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ 
+ input {
+     margin-bottom: 1rem;
+     margin-top: 3rem;
+     width: 20rem;
+     padding: 0;
+     font-size: 1.8rem;
+     border: none;
+     box-shadow: 0 0.2rem 1.5rem 0 rgba(37, 41, 43, 0.5);
+ 
+ }
+
+/* Listed Score with no bullets */
+ ul {
+     list-style: none;
+     font-size: 25px;
+     flex-direction: column;
+     align-items: center;
+     display: flex;
+ }
+
+ p {
+     color: white;
+ }
+ 
+ input::placeholder {
+     text-align: center;
+     color: rgb(211, 207, 207);
+ }
+
+ /* Save Card styling */ 
+ .container{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ 
+ .container h1 {
+     display: flex;
+     flex-direction: column;
+     color: rgb(227, 19, 255);
+     align-items: center;
+ }
+ 
+ form {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ 
+ input {
+     margin-bottom: 1rem;
+     margin-top: 1rem;
+     width: 20rem;
+     padding: 0;
+     font-size: 1.8rem;
+     border: none;
+ 
+ }
+ 
+ input::placeholder {
+     color: #bd1425;
+ }
+ 
+ .containter section {
+     flex-direction: column;
+     align-items: center;
+     display: flex;
+     margin: 21px 0;
+ }
+ 
+ h2 {
+     flex-direction: column;
+     align-items: center;
+     display: flex;
+ }
+ 
+ button {
+     margin: 0 9px;
+     height: 46px;
+     padding: 0 19px;
+     font-size: 19px;
+     font-weight: 501;
+     cursor: pointer;
+     border: none;
+     outline: none;
+     border-radius: 6px;
+     border: 1px solid rgb(223, 6, 78);
+     transition: all 0.3s ease;
+ }
+ 
+ button {
+     color: black;
+     background: rgb(223, 6, 78);
+ }
+ 
+ button:hover {
+     color: rgb(255, 19, 98);
+     background:  rgb(12, 12, 12);
+ }
+
+ .buttons{
+    padding: 10px;
+    margin-left: 65%;
+ }
+ 
+ /* Score Card Styling */
+ .container-scores {
+    position:absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container-scores {
+    width: 475px;
+     height: 420px;
+     margin-top: 5%;
+     contain: content;
+     background: rgb(209, 209, 209);
+     border-radius: 10px;
+     transform: translate(-50%, -50%) scale(0.9);
+     opacity: 1;
+     pointer-events: none;
+     transition: all 0.3s ease;
+}
+
+.container-scores h1 {
+    display: flex;
+    flex-direction: column;
+    color: rgb(227, 19, 255);
+    align-items: center;
+}
+
+/* Screen Adjustments via Media Query */
+@media screen and (min-width: 300px) {
+    body{
+        height: 1000px;
+        margin-right: 35%;
+
+    }
+    .container h1{
+        margin-top: 5%;
+    }
+    .buttons{
+        margin-left: 22%;
+    }
+    .container-scores{
+        margin-top: 20%;
+    }
+
+}
+
+@media screen and (min-width: 550px) {
+    body{
+        height: 1000px;
+        margin-right:0px;
+    }
+    .buttons{
+        margin-left:25%;
+    }
+    .container-scores{
+        margin-bottom: 50px;
+        margin-top: 16%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    body{
+        height: 1000px;
+        margin-right:0px;
+    }
+    .buttons{
+        margin-left:38%;
+    }
+    .container-scores{
+        height: 500px;
+        margin-top: 12%;
+    }
+}

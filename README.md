@@ -30,3 +30,8 @@ With this application, there is plenty of room for further development.
 * Fill in the blank
 * Algorhythm fuctionality tests
 * and More
+
+
+### Contact Me
+
+<a href="mailto:srawilkinsonwilliams@yahoo.com"> Wilkinson Williams </a>

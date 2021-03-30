@@ -31,6 +31,11 @@ With this application, there is plenty of room for further development.
 * Algorhythm fuctionality tests
 * and More
 
+## License
+
+![License badge](https://img.shields.io/badge/License-MIT-green)
+
+Copyright (c) 2021 Wilkinson John Williams
 
 ### Contact Me
 
